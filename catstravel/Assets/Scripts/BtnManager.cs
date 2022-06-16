@@ -5,8 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class BtnManager : MonoBehaviour
 {
-    public void ChangeScene()
+    public void OnGUI()
     {
-        SceneManager.LoadScene("MainScene");
+        var style = new GUIStyle(GUI.skin.button);
+        style.fontSize = 65;
+        GUI.backgroundColor = Color.yellow;
+        if (GUI.Button(new Rect(710, 650, 500, 200), "START", style))
+        {
+            SceneManager.LoadScene("MainScene");
+        }
     }
 }
