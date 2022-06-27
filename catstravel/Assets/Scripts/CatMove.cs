@@ -15,7 +15,7 @@ public class CatMove : MonoBehaviour
     void Start()
     {
         speed = 10.0f;
-        jumpSpeed = 10.0f;
+        jumpSpeed = 30.0f;
         gravity = 20.0f;
 
         MoveDir = Vector3.zero;
