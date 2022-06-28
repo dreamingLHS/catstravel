@@ -18,5 +18,9 @@ public class GameManager : MonoBehaviour
         {
             Inventory.SetActive(true);
         }
+        if (Input.GetKey(KeyCode.Tab))
+        {
+
+        }
     }
 }

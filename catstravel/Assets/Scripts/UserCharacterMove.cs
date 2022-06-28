@@ -5,19 +5,16 @@ using UnityEngine;
 public class UserCharacterMove : MonoBehaviour
 {
     //캐릭터 직선 이동 속도 (걷기)
-    public float walkMoveSpd = 2.0f;
-
-    //캐릭터 직선 이동 속도 (달리기)
-    public float runMoveSpd = 3.5f;
+    public float walkMoveSpd = 5.0f;
 
     //캐릭터 회전 이동 속도 
     public float rotateMoveSpd = 100.0f;
 
     //캐릭터 회전 방향으로 몸을 돌리는 속도
-    public float rotateBodySpd = 2.0f;
+    public float rotateBodySpd = 5.0f;
 
     //캐릭터 이동 속도 증가 값
-    public float moveChageSpd = 0.1f;
+    public float moveChageSpd = 0.5f;
 
     //현재 캐릭터 이동 백터 값 
     private Vector3 vecNowVelocity = Vector3.zero;

@@ -63,7 +63,6 @@
     <Compile Include="Assets\Scripts\UserCharacterMove.cs" />
     <Compile Include="Assets\Scripts\Paper.cs" />
     <Compile Include="Assets\Scripts\CamAct.cs" />
-    <Compile Include="Assets\Scripts\CatMove.cs" />
     <Compile Include="Assets\Scripts\Item.cs" />
   </ItemGroup>
   <ItemGroup>
