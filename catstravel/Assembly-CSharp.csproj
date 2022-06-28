@@ -60,11 +60,11 @@
     <Compile Include="Assets\Scripts\BtnManager.cs" />
     <Compile Include="Assets\Scripts\CamController.cs" />
     <Compile Include="Assets\Scripts\ItemPickUp.cs" />
+    <Compile Include="Assets\Scripts\UserCharacterMove.cs" />
     <Compile Include="Assets\Scripts\Paper.cs" />
     <Compile Include="Assets\Scripts\CamAct.cs" />
     <Compile Include="Assets\Scripts\CatMove.cs" />
     <Compile Include="Assets\Scripts\Item.cs" />
-    <Compile Include="Assets\Scripts\UserCharacterMove.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -4160,8 +4160,8 @@ MonoBehaviour:
   rotateMoveSpd: 100
   rotateBodySpd: 2
   moveChageSpd: 0.1
-  animationClipIdle: {fileID: 7400000, guid: e0cc63341ff9db542a57a592c9a5bfd0, type: 2}
-  animationClipWalk: {fileID: 7400000, guid: 13d1e9fb988813d4198e81ba8221e295, type: 2}
+  Idle: {fileID: 7400000, guid: e0cc63341ff9db542a57a592c9a5bfd0, type: 2}
+  Walk: {fileID: 7400000, guid: 13d1e9fb988813d4198e81ba8221e295, type: 2}
   playerState: 0
 --- !u!65 &1283225675
 BoxCollider:
@@ -4208,6 +4208,23 @@ MonoBehaviour:
   xmove: 0
   ymove: 0
   distance: 3
+--- !u!111 &1283225679
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283225672}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 7400000, guid: e0cc63341ff9db542a57a592c9a5bfd0, type: 2}
+  - {fileID: 7400000, guid: 13d1e9fb988813d4198e81ba8221e295, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1307828234 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6628919782801304930, guid: 02ad78cca7f19f843b49a2e580791919, type: 3}

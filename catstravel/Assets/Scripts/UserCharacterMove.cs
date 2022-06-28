@@ -33,8 +33,8 @@ public class UserCharacterMove : MonoBehaviour
 
 
     [Header("애니메이션 속성")]
-    public AnimationClip animationClipIdle = null;
-    public AnimationClip animationClipWalk = null;
+    public AnimationClip Idle = null;
+    public AnimationClip Walk = null;
 
     //컴포넌트도 필요합니다 
     private Animation animationPlayer = null;
@@ -62,9 +62,8 @@ public class UserCharacterMove : MonoBehaviour
         playerState = PlayerState.Idle;
 
         //animation WrapMode : 재생 모드 설정 
-        animationPlayer[animationClipIdle.name].wrapMode = WrapMode.Loop;
-        animationPlayer[animationClipWalk.name].wrapMode = WrapMode.Loop;
-        animationPlayer[animationClipWalk.name].wrapMode = WrapMode.Loop;
+        animationPlayer[Idle.name].wrapMode = WrapMode.Loop;
+        animationPlayer[Walk.name].wrapMode = WrapMode.Loop;
 
     }
 
@@ -154,28 +153,6 @@ public class UserCharacterMove : MonoBehaviour
     }
 
     /// <summary>
-	/// GUI SKin
-	/// </summary>
-    private void OnGUI()
-    {
-        if (controllerCharacter != null && controllerCharacter.velocity != Vector3.zero)
-        {
-            var labelStyle = new GUIStyle();
-            labelStyle.fontSize = 50;
-            labelStyle.normal.textColor = Color.white;
-            //캐릭터 현재 속도
-            float _getVelocitySpd = getNowVelocityVal();
-            GUILayout.Label("현재속도 : " + _getVelocitySpd.ToString(), labelStyle);
-
-            //현재 캐릭터 방향 + 크기
-            GUILayout.Label("현재벡터 : " + controllerCharacter.velocity.ToString(), labelStyle);
-
-            //현재  재백터 크기 속도
-            GUILayout.Label("현재백터 크기 속도 : " + vecNowVelocity.magnitude.ToString(), labelStyle);
-
-        }
-    }
-    /// <summary>
     /// 캐릭터 몸통 벡터 방향 함수
     /// </summary>
     void vecDirectionChangeBody()
@@ -215,10 +192,10 @@ public class UserCharacterMove : MonoBehaviour
         switch (playerState)
         {
             case PlayerState.Idle:
-                playAnimationByClip(animationClipIdle);
+                playAnimationByClip(Idle);
                 break;
             case PlayerState.Walk:
-                playAnimationByClip(animationClipWalk);
+                playAnimationByClip(Walk);
                 break;
         }
     }
@@ -238,7 +215,7 @@ public class UserCharacterMove : MonoBehaviour
 
         else
         {
-            playerState = PlayerState.Idle;
+            playerState = PlayerState.Walk;
         }
     }
 
